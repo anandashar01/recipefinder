@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'fridgelookup/style.css' %}">
+
+<h1>RECIPE FIND</h1>
+
+<h2> Select your fridge below: </h2>
+
+{% if fridge_list %}
+    <ul>
+    {% for fridge in fridge_list %}
+        <li><a href="/fridgelookup/{{ fridge.id }}/">{{ fridge.fridge_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No fridges are available.</p>
+{% endif %}

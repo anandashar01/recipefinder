@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'fridgelookup/style.css' %}">
+
+
+{% if recipe_list %}
+    <p>These are the recipes you can make with the ingredients in your fridge:</p>
+    <ul>
+    {% for recipe_link in recipe_list %}
+        <li><a href=" {{ recipe_link }} ">{{ recipe_link }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No recipes are available in your fridge.</p>
+{% endif %}
