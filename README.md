@@ -1,4 +1,4 @@
-# Recipe Find
+# Recipe Finder
 
 To use:
 Download repository locally. Within conda environment, run "python manage.py runserver" and go to local hosting site. From index website, choose fridge to work within and follow on-screen instructions. Functionalities currently limited to returning recipe URLs for which you have every ingredient in your fridge.
